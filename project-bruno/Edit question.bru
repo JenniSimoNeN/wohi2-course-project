@@ -1,0 +1,20 @@
+meta {
+  name: Edit question
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{baseUrl}}/9
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "question": "Which country is famous for Kimchi?",
+    "answer": "South Korea",
+    "keywords": ["food"]
+  }
+  
+}

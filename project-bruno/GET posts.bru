@@ -1,0 +1,20 @@
+meta {
+  name: GET posts
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "question": "What is Tofu made from?",
+    "answer": "Soybeans",
+    "keywords": ["food", "noMeat"]
+  }
+  
+}
