@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Question {
+  id       Int       @id @default(autoincrement())
+  question    String    @db.VarChar(255)
+  answer  String    @db.Text
+  keywords Keyword[]
+
+  @@map("questions")
+}
+
+model Keyword {
+  id    Int    @id @default(autoincrement())
+  name  String @unique @db.VarChar(100)
+  questions Question[]
+
+  @@map("keywords")
+}
+
+

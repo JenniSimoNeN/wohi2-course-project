@@ -5,5 +5,15 @@ meta {
 }
 
 get {
-  url: 
+  url: {{baseUrl}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "question": "Who are you?",
+    "answer": "Jenni",
+    "keywords": ["me"]
+  }
 }
