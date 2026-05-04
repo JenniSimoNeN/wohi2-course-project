@@ -17,6 +17,7 @@ function authenticate(req, res, next) {
   } catch (err) {
     res.status(403).json({ error: "Invalid or expired token" });
   }
+  console.log("AUTH USER:", req.user);
 }
 
 module.exports = authenticate;
