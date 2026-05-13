@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+coverage
+.env
+.env.test
+.git
+.gitignore
+.DS_Store
+postman
+project-bruno
+src/generated
+public/uploads/*
+!public/uploads/.gitkeep
